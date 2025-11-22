@@ -1,0 +1,529 @@
+:root {
+    --primary-red: #b52a2a;
+    --dark-bg: #1a1a1a;
+    --light-cream: #f5f0e8;
+    --silver: #c0c0c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #2d2d2d 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=80') center/cover;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26,26,26,0.7) 0%, rgba(45,45,45,0.6) 100%);
+    z-index: 1;
+}
+
+.hero-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 2rem 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo-text {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--silver);
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.9), 0 0 20px rgba(255,255,255,0.3);
+    letter-spacing: 0.3rem;
+}
+
+.logo-accent {
+    color: var(--primary-red);
+    position: relative;
+    display: inline-block;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.9), 0 0 30px rgba(181,42,42,0.6);
+}
+
+.tagline {
+    color: var(--silver);
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 0;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.9), 0 0 25px rgba(255,255,255,0.2);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--light-cream);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+}
+
+.cta-button {
+    background: var(--primary-red);
+    color: white;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.9s both;
+    box-shadow: 0 10px 30px rgba(181, 42, 42, 0.3);
+}
+
+.cta-button:hover {
+    background: #8f2121;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(181, 42, 42, 0.5);
+}
+
+/* Features Section */
+.features-section {
+    background: var(--light-cream);
+    padding: 5rem 0;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.feature-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(181, 42, 42, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-bg);
+    margin-bottom: 1rem;
+}
+
+/* Cars Gallery Section */
+.cars-gallery-section {
+    background: white;
+    padding: 5rem 0;
+}
+
+.car-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.car-card.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.car-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(181, 42, 42, 0.3);
+}
+
+.car-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.car-card-body {
+    padding: 1.5rem;
+}
+
+.car-brand {
+    color: var(--primary-red);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.car-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-bg);
+    margin: 0.5rem 0;
+}
+
+.car-price {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-red);
+    margin: 1rem 0;
+}
+
+.car-status {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #2d2d2d 100%);
+    padding: 5rem 0;
+    position: relative;
+}
+
+.testimonial-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 1rem 0;
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.testimonial-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial-card:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-5px);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-red);
+    margin-right: 1.5rem;
+}
+
+.testimonial-info h4 {
+    color: white;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.testimonial-country {
+    color: var(--silver);
+    font-size: 0.9rem;
+}
+
+.testimonial-rating {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    color: var(--light-cream);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.testimonial-car {
+    color: var(--primary-red);
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Quality Section */
+.quality-section {
+    background: linear-gradient(135deg, var(--primary-red) 0%, #8f2121 100%);
+    color: white;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.quality-badge {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 2rem 0;
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.quality-badge:hover {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.05);
+}
+
+.stats-counter {
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+}
+
+/* Process Section */
+.process-section {
+    background: white;
+    padding: 5rem 0;
+}
+
+.process-step {
+    text-align: center;
+    padding: 2rem;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.process-step.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 5px 20px rgba(181, 42, 42, 0.3);
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--dark-bg);
+    color: white;
+    padding: 5rem 0;
+}
+
+.contact-info {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+    background: rgba(181, 42, 42, 0.2);
+    transform: translateX(10px);
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Modal Styles */
+.modal-content {
+    background: var(--light-cream);
+    border-radius: 20px;
+}
+
+.modal-header {
+    background: var(--primary-red);
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.carousel-inner img {
+    border-radius: 10px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.car-details {
+    padding: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.detail-label {
+    font-weight: 700;
+    color: var(--dark-bg);
+}
+
+.detail-value {
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: var(--primary-red);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .logo-text {
+        font-size: 2.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .carousel-inner img {
+        height: 250px;
+    }
+}

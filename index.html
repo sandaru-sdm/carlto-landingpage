@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlto - Power in Motion | Premium Japanese Vehicles</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-wrapper">
+            <div class="container">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-accent">C</span>ARLTO<sup style="font-size: 1.5rem;">™</sup>
+                    </div>
+                    <div class="tagline">Power in Motion</div>
+                </div>
+                
+                <div class="hero-content text-center">
+                    <h1 class="hero-title">
+                        VEHICLES EXPORT<br>
+                        <span style="color: var(--primary-red);">FROM JAPAN</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        High-Quality Vehicles Trusted for Durability, Performance & Advanced Technology
+                    </p>
+                    <button class="cta-button" onclick="scrollToContact()">
+                        <i class="fab fa-whatsapp me-2"></i> Get Started Today
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Why Choose Carlto?</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card" data-delay="0">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Quality Assurance</h3>
+                        <p>Every vehicle undergoes rigorous inspection to ensure top-notch quality and reliability before export.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card" data-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="feature-title">Wide Selection</h3>
+                        <p>Access to extensive inventory of premium Japanese vehicles from top brands including Toyota, Honda, Nissan, and more.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card" data-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="feature-title">Hassle-Free Process</h3>
+                        <p>We handle LC & Custom clearance easily through our trusted clearance agents, making your import seamless.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="feature-card" data-delay="600">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="feature-title">Competitive Pricing</h3>
+                        <p>Get premium Japanese vehicles at low prices without compromising on quality or service excellence.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card" data-delay="800">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 class="feature-title">Fast Delivery</h3>
+                        <p>Efficient shipping and logistics ensure your dream vehicle reaches you in optimal time and condition.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card" data-delay="1000">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">24/7 Support</h3>
+                        <p>Dedicated customer support team ready to assist you throughout your vehicle import journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imported Cars Gallery Section -->
+    <section class="cars-gallery-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Recently Imported Vehicles</h2>
+                <p class="lead text-muted">Explore our successful deliveries to satisfied customers worldwide</p>
+            </div>
+            <div class="row" id="carsGallery">
+                <!-- Cars will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">What Our Customers Say</h2>
+                <p class="lead text-white-50">Real experiences from satisfied customers around the world</p>
+            </div>
+            <div class="row" id="testimonialsContainer">
+                <!-- Testimonials will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Section -->
+    <section class="quality-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">Quality & Reliability</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3 class="display-4 fw-bold mb-4">Japanese Excellence</h3>
+                    <p class="lead">We offer a wide range of high-quality vehicles from Japan. Trusted for their durability, performance, and advanced technology.</p>
+                    <div class="quality-badge">
+                        <h4 class="mb-3"><i class="fas fa-check-circle me-2"></i> Certified Quality</h4>
+                        <p>All vehicles are sourced from authorized Japanese dealers and undergo comprehensive quality checks.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row text-center">
+                        <div class="col-6 mb-4">
+                            <div class="stats-counter" data-target="1000">0</div>
+                            <p class="lead">+ Vehicles Exported</p>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-counter" data-target="98">0</div>
+                            <p class="lead">% Customer Satisfaction</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-counter" data-target="50">0</div>
+                            <p class="lead">+ Countries Served</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-counter" data-target="15">0</div>
+                            <p class="lead">+ Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">How It Works</h2>
+                <p class="lead text-muted">Simple steps to make your dream vehicle come true</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="process-step" data-delay="0">
+                        <div class="step-number">1</div>
+                        <h4>Choose Your Vehicle</h4>
+                        <p>Browse our extensive inventory and select your dream Japanese vehicle.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step" data-delay="200">
+                        <div class="step-number">2</div>
+                        <h4>Place Order</h4>
+                        <p>Contact us via WhatsApp or phone to confirm your order and requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step" data-delay="400">
+                        <div class="step-number">3</div>
+                        <h4>We Handle Everything</h4>
+                        <p>Our team manages LC, customs clearance, and all documentation hassle-free.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step" data-delay="600">
+                        <div class="step-number">4</div>
+                        <h4>Receive Your Car</h4>
+                        <p>Get your vehicle delivered to your doorstep in perfect condition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">Get In Touch</h2>
+                <p class="lead">Ready to import your dream vehicle? Contact us today!</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-info">
+                                <h4><i class="fab fa-whatsapp me-2" style="color: #25D366;"></i> WhatsApp</h4>
+                                <p class="lead">+81 70-8444-7791</p>
+                                <p class="text-muted">Available 24/7 for instant responses</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-info">
+                                <h4><i class="fas fa-globe me-2" style="color: var(--primary-red);"></i> Website</h4>
+                                <p class="lead">www.carlto.jp</p>
+                                <p class="text-muted">Browse our complete inventory online</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="https://wa.me/817084447791" class="cta-button" style="display: inline-block; text-decoration: none;">
+                            <i class="fab fa-whatsapp me-2"></i> Start Your Journey Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Carlto™ - Power in Motion. All Rights Reserved.</p>
+            <p class="text-muted mt-2">Your Trusted Partner for Premium Japanese Vehicle Imports</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/817084447791" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Car Details Modal -->
+    <div class="modal fade" id="carModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselImages" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner" id="carouselInner">
+                            <!-- Images will be loaded here -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="car-details" id="carDetails">
+                        <!-- Details will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
